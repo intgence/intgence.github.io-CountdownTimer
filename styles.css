@@ -1,0 +1,20 @@
+.centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    /* text-align: center; */
+    font-size: 3vw;
+    color: gray;
+    transform: translate(-50%, -50%);
+}
+body, html{
+      height: 100%;
+      margin: 0;
+}
+.bg{
+    background-image: url('https://images.unsplash.com/photo-1632578810034-0642549a33a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Aajao Meet k Liye</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class = 'centered'>
+        <!-- <p>Gadhiya Meet at 6 pm!!!</p> -->
+        <p id="timer"></p>
+    </div>
+    <div>
+        <script>
+            var countDownDate = new Date("Dec 21, 2021 18:00:00").getTime();
+            var x = setInterval(function(){
+
+                var now = new Date().getTime();
+                
+                var diff = countDownDate - now;
+
+                var days =  Math.floor(diff/(1000*60*60*24));
+                var hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+                var min = Math.floor((diff%(1000*60*60))/(1000*60));
+                var sec = Math.floor((diff%(1000*60))/1000);
+
+                document.getElementById('timer').innerHTML = days+" d : "+hours+" h : "+min+" m : "+sec+" s";
+                if(diff<=0){
+                    clearInterval(x);
+                    document.getElementById('timer').innerHTML("GO! GO! GO! THE MEETING HAS BEGUUUUUUNNNNNN!!!");
+                }
+                
+            })
+        </script>
+    </div>
+</body>
+</html>
